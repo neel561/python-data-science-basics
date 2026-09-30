@@ -3,7 +3,7 @@ import os
 import time
  
 def clear():
-    os.system("clear")
+    os.system("cls" if os.name == "nt" else "clear")
  
 # Set of instructions for Rock-Paper-Scissors
 def rps_instructions():
@@ -142,7 +142,7 @@ def rpsls():
         else:
             clear()
             print("Wrong Input!!")
-            rps_instructions()  
+            rpsls_instructions()  
             continue
  
  
